@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+BUILD_DIR=$1
+
+echo "Running heroku-build.sh to capture SOURCE_VERSION..."
+
+cp "$(dirname "$0")/../heroku-build.sh" "$BUILD_DIR/"
+
+cd "$BUILD_DIR" || exit 1
+
+chmod +x heroku-build.sh
+
+./heroku-build.sh
+
+echo "heroku-build.sh execution completed."

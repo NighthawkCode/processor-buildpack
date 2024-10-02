@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Always return 0 to ensure the buildpack runs
+exit 0
